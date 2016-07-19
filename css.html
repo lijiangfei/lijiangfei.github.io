@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .top{height: 70px;  background: #515c8e;  margin-bottom: 120px; position: relative;}
+        .img1{position: absolute; left: 50%; top:0; margin-left: -100px; z-index: 111;}
+        .img1 p{position: absolute; left:54px; top:89px; font-size: 20px; color:#fff; font-family: 'Microsoft YaHei'}
+        .ul1{width:210px; height:35px; overflow: hidden;position: absolute; left: 200px; top:16px;}
+        .ul1 li{width:24px; height:35px; float: left; line-height: 34px; text-align: center; font-size: 20px; position: relative; color:#fff; border-radius: 5px;}
+        .ul1 li img{position: absolute; left: 0; top:0;  border-radius: 5px;}
+        .hd-bot{width: 100%; height: 40px; background: url("img/vect.png") repeat-x; position: absolute; left: 0; top: 70px;}
+        .con{width:1000px; height:4434px; background: #fff; margin: 0 auto; position: relative; margin-top: -8px; z-index: 111;}
+        .main-tit{padding: 50px 80px;}
+        .main-tit .subtitle{ font-size:30px; font-family: Lato, "Microsoft YaHei", sans-serif; font-weight: 900; margin: 0.5em 0; text-shadow: 1px 1px #EFEFEF,2px 2px #AEE2D9; color: #22C3AA;}
+        .main-tit a{font-size: 33px; color:#AB466A;}
+        .main-tit a:hover{color:#333;}
+        .con-1{width:100%; height:244px; border-top:3px dashed #22C3AA; position:relative;}
+        .con-1 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#09c; margin-top: 30px;}
+        .con-1 .title{width:796px;background-color: #AEE2D9;margin: 20px auto;padding: 1em 1.5em;border-style: solid;border-color: #22C3AA;border-width: 0 1px 0 7px;color: #444;font-size: 1rem;}
+        .con-2{width:100%; height:547px; border-top:3px dashed #22C3AA; position:relative;}
+        .con-2 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#09c; margin-top: 30px;}
+        .con-2 a{display:block; width:840px; margin: 0 auto; margin-top: 60px;}
+        .con-2 a img{width:100%;}
+        .con-3{width:100%; height:738px; border-top:3px dashed #22C3AA; position:relative;}
+        .con-3 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#09c; margin-top: 30px;}
+        .con-3 a{display:block; width:840px; margin: 0 auto;}
+        .con-3 a img{width:100%;}
+        .con-4{width:100%; height:629px; border-top:3px dashed #22C3AA; position:relative;}
+        .con-4 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#09c; margin-top: 30px;}
+        .con-4 a{display:block; width:840px; margin: 0 auto;}
+        .con-4 a img{width:100%;}
+        .con-4 #btn3{color:#fff;position: absolute; left:433px;top:235px; width:100px; height:30px; text-align: center; line-height: 30px; background: #09c;}
+        .con-5{width:100%; height:493px; border-top:3px dashed #22C3AA; position:relative;}
+        .con-5 a{display:block; width:840px; margin: 0 auto;}
+        .con-5 a img{width:100%;}
+        .con-5 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#09c; margin-top: 30px;}
+        .con-6{width:100%; height:818px; border-top:3px dashed #22C3AA; position:relative; margin-top:130px;}
+        .con-6 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#09c; margin-top: 30px;}
+        .con-6 a{display:block; width:840px; margin: 0 auto;}
+        .con-6 a img{width:100%;}
+        .con-7{width:100%; height:626px; border-top:3px dashed #22C3AA; position:relative; margin-top:-147px;}
+        .con-7 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#09c; margin-top: 30px;}
+        .con-7 a{display:block; width:840px; margin: 0 auto;}
+        .con-7 a img{width:100%;}
+        .foot{width:1000px; height:102px; margin: 40px auto; text-align: center; padding-left:400px;}
+        .foot a{float:left; font-size: 30px; color:#fff; font-family: 'Microsoft YaHei'; margin-right:20px;}
+        .foot a:hover{color:#333;}
+        .scroll{background: url("img/xhj.png") -48px -19px; position: fixed;  right:23px; bottom:50px; width:51px; height:100px;   cursor:pointer;}
+        .scroll:hover{background: url("img/xhj.png") -645px -19px; width:51px; height:162px;}
+        .last{width:100%;height:50px; background: #000; position: relative;}
+        .last div{background: url("img/last.png"); width:100%; height:10px; position: absolute; left: 0; top:-10px; z-index:999;}
+    </style>
+    <script src="js/move.js"></script>
+    <script>
+        function toDou(n){
+            return n<10?'0'+n:''+n;
+        }
+        window.onload=function(){
+            var oUl=document.getElementById('ul1');
+            var aImg=oUl.getElementsByTagName('img');
+            function clock(){
+                var oDate=new  Date;
+                var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+                for(var i=0; i<aImg.length; i++){
+                    move(aImg[i],{top:-35*str.charAt(i)},{easing:'linear',duration:500})
+                }
+            }
+            clock();
+        }
+    </script>
+</head>
+<body style="background: #22C3AA">
+    <div class="top">
+        <ul id="ul1" class="ul1">
+            <li><img src="img/num.png" alt=""></li>
+            <li><img src="img/num.png" alt=""></li>
+            <li>:</li>
+            <li><img src="img/num.png" alt=""></li>
+            <li><img src="img/num.png" alt=""></li>
+            <li>:</li>
+            <li><img src="img/num.png" alt=""></li>
+            <li><img src="img/num.png" alt=""></li>
+        </ul>
+        <div class="img1"><img src="img/post.png" alt=""><p>javascript</p></div>
+        <div class="hd-bot"></div>
+    </div>
+    <div class="con">
+        <div class="main-tit">
+            <h2 class="subtitle">原生Javascript应用</h2>
+            <h2 class="subtitle"><a href="index.html">首页</a></h2>
+            <h2 class="subtitle"><a href="Profile.html">联系我</a></h2>
+            <h2 class="subtitle"><a href="css.html">CSS &amp; HTML作品页</a></h2>
+            <div class="scissors"></div>
+        </div>
+        <div class="con-1">
+            <h3>一些静态页面</h3>
+            <div class="title">
+                <p>之前工作时候切过一些小专题和网页部分内容，所以之后找了一些朋友要了写网站素材，切了一些电商的首页和游戏首页，感觉很不一样，只能说各有各的特点吧。下边列出一些我自己切的首页（没有特意去兼容IE低版本，因为个人比较不喜欢，调起来也较麻烦，而且目前趋势的话还是逐渐淘汰低版本浏览器，不过兼容的调试也不敢怠慢下来）。</p>
+            </div>
+        </div>
+        <div class="con-2">
+            <a href="mls/index.html"><img src="img/meilishuo.jpg" alt=""></a>
+        </div>
+        <div class="con-3">
+            <h3>爱奇艺</h3>
+            <a href="aqy/index.html"><img src="img/aiqiyi.jpg" alt=""></a>
+        </div>
+        <div class="con-4">
+            <h3>百得利</h3>
+            <a href="bdl/index.html"><img src="img/bdl.jpg" alt=""></a>
+        </div>
+        <div class="con-5">
+            <h3>灵魂回响</h3>
+            <a href="lhhx/index.html"><img src="img/lhhx.jpg" alt=""></a>
+        </div>
+        <div class="con-6">
+            <h3>opoo</h3>
+            <a href="oppo/oppo.html"><img src="img/opo.jpg" alt=""></a>
+        </div>
+        <div class="con-7">
+            <h3>京东</h3>
+            <a href="jd/index.html"><img src="img/jd.jpg" alt=""></a>
+        </div>
+    </div>
+    <div id="footer-nav" class="foot clearfix">
+        <a href="#" class="toptop">Top丨</a>
+        <a href="index-3.html">About Me丨</a>
+        <a href="js.html">JS丨</a>
+        <a href="javascript:;">CSS &amp; HTML丨</a>
+    </div>
+    <div class="scroll" id="str"></div>
+    <div class="last"><div></div></div>
+</body>
+</html>

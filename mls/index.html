@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .box{width:100%; height: 100%;}
+        .top{height:40px; background:#f5f5f5;}
+        .top-con{width:695px; padding-left:675px;}
+        .top-con img{margin-right: 4px;}
+        .li-1{width:84px; height: 18px; border-right:1px dashed #ccc; margin-top: 10px; line-height: 18px; text-align: center;}
+        .li-2{width:54px; height: 18px; line-height: 18px; border-right:1px dashed #ccc; margin-top: 10px; text-align: center;}
+        .li-3{width:136px; height: 18px; line-height: 18px; border-right:1px dashed #ccc; margin-top: 10px; text-align: center;}
+        .li-4{width:94px; height: 18px; line-height: 18px; border-right:1px dashed #ccc; margin-top: 10px; text-align: center;}
+        .li-5{width:72px; height: 18px; line-height: 18px;  margin-top: 10px; text-align: center; margin-right: 10px;}
+        .top-con a:hover{color:#ff6599;}
+
+        .nav-top{height:66px; border:1px solid #ccc;}
+        .nav-top li{height:66px; line-height: 66px;}
+        .nav-top img{padding-top:15px; padding-left: 10px;}
+        .nav-top .li-1{width:486px; height: 32px; border:2px solid #ff6699; margin-left: 254px;}
+        .nav-top .bbi{width:70px; height: 32px; line-height: 32px; text-align: center;}
+        .bbi .bbi-con{border:1px solid #ccc; height: 32px;}
+        .nav-top input{width:300px; height: 32px; border:0; color: #ccc; background: url("img/fdj.jpg") no-repeat 8px center;
+        padding-left: 26px; }
+        .nav-top .a-1{width:90px; height:32px; background: #ff6699;color:#fff; line-height: 32px;}
+        .bbi-con .show{display: none; height: 100px;}
+        .bbi-con a:hover{color:#f00;}
+        .bbi-con a:hover .show{display:block;}
+
+        .nav-con{height:40px; background:#ff6599; line-height: 40px; padding-left:137px;}
+        .nav-con li a{ font-family: '微软雅黑';}
+        .nav-con .li-7 a{width:57px; border:0; display: block; color: #fff; height: 40px; background:#ed3577; text-align: center;}
+        .nav-con .li-8 a{width:90px; border:0;  display: block; color: #fff; height: 40px; text-align: center;}
+        .nav-con .li-9 a{width:90px; border:0;  display: block; color: #fff; height: 40px; text-align: center;}
+        .nav-con a:hover{background: #ed3577;}
+
+        .con-1{width:1201px; height: 572px; border:1px solid #ccc; margin: 0 auto;}
+        .con-l-1{width:200px; height: 100px;  border-bottom:1px dashed #ccc; margin: 14px 20px;}
+        .con-l-1 h1{font-size: 16px; color:#ff6699; margin-bottom: 14px;}
+        .con-l-1 p{width:200px; height: 114px; line-height: 22px;}
+        .con-l-1 i{color:#ff6699;}
+        .con-l-1-d{border:0;}
+        .con-l-1 a:hover{color:#ff6699;}
+        .banner{height:572px; width:761px;}
+        .banner div{margin-right:10px; }
+        .bar-con{ padding-left:11px; padding-top: 10px;}
+
+        .con-2{width:1201px; height:398px; border:1px solid #ccc; margin: 14px auto; border-right:0; border-left:0;}
+        .con-2 h1{font-size: 20px; height: 54px; line-height: 54px;}
+        .con-2 h1 i{color:#ff6699; font-size: 20px;}
+        .con-2 li{margin-right:30px;}
+        .con-2 div{line-height: 38px; border-bottom:1px dashed #ccc;}
+        .con-2 div i{color:#ed3577;}
+        .con-2 div span{color:#999; text-decoration: line-through;}
+
+        .con-3{width:1201px; height:374px; margin: 0 auto;}
+        .con-3 li{width:178px; border-bottom:1px dashed #ccc; margin-right: 22px;}
+        .con-3 li i{margin-top:10px; color: #666;}
+        .con-3 li span{color:#999; text-decoration: line-through;}
+        .con-3 p{color:#ff7dc8;}
+        .con-3 div a{line-height: 18px; color:#999;}
+        .con-3 div a:hover{color:#ff7dc8;}
+
+        .con-4{width:1201px; height:398px; border:1px solid #ccc; margin: 14px auto; border-right:0; border-left:0;}
+        .con-4 h1{font-size: 20px; height: 54px; line-height: 54px;}
+        .con-4 h1 p{font-size:12px;}
+        .con-4 h1 i{color:#ff6699; font-size: 20px;}
+        .con-4 li{margin-right:30px;}
+        .con-4 div{line-height: 38px; border-bottom:1px dashed #ccc;}
+        .con-4 div i{color:#ed3577;}
+        .con-4 div span{color:#999; text-decoration: line-through;}
+
+        .logo-2{margin: 0 auto; width:1200px;}
+
+        .con-5{width:1201px; height: 666px; margin: 0 auto; border-top:1px solid #ccc; border-bottom:1px solid #ccc; }
+        .con-5 h1{height:52px; line-height: 52px; border-bottom:1px solid #ccc;}
+        .con-5-l i{font-size:20px; border-right:1px dashed #ccc; padding-right: 10px;}
+        .con-5 span{padding-left:10px; color: #999;}
+        .con-5 h1 img{padding-top:10px;}
+        .con-5 span a:hover{color:#ed3577;}
+        .con-5-l li{margin-right:8px; padding-top: 20px;}
+        .con-5-l{width:940px;}
+        .con-5-r{width:258px; border:1px solid #ccc; height:592px; margin-top:20px;}
+        .con-5-r .li-4{border-bottom:0; border-right:0;}
+        .con-5-r li{width:240px;height:63px; border-bottom:1px dashed #ccc; margin-left: 10px;}
+        .con-5-r .hi-1 h1{border:0; font-size: 16px; font-weight:bold;}
+        .hi-1 a{margin-left: 70px; color: #ccc; font-weight:normal;}
+        .con-5-r div{padding-top:16px; margin-left:12px;}
+        .con-5-r div i{color:#ccc;}
+        .con-5-r img{padding-top:10px;}
+        .con-5 .div-t{width:301px; height: 44px; border-right:1px dashed #ccc;}
+        .div-t h2{font-size: 18px;color: #ff6599; line-height: 44px; margin-right: 20px;}
+        .div-t p{line-height: 24px; }
+        .div-t p a{color: #ccc;}
+        .con-5 a:hover{color: #ed3577;}
+
+        .con-6{width:1201px; height:338px; margin:0 auto;}
+        .con-6 h3{margin-top:2px; height:55px; line-height:55px; font-size: 20px; background: #fff;}
+        .con-6 .ul-1{height:55px; line-height: 55px;}
+        .con-6 .ul-1 li{width:58px; height:18px; border-right:1px dashed #ccc; line-height: 18px; margin-top: 10px; text-align: center;}
+        .con-6 .img-1{ padding-top: 20px;}
+        .con-6 .a-1{font-size: 20px;}
+        .con-6 .a-1 i{font-size: 20px;}
+        .con-6 h3 a:hover{color: #ed3577;}
+        .con-6-1{width:226px; height: 283px;margin-right:14px;}
+        .con-6-1 h4{font-weight:bold; padding-left:14px; padding-top: 12px;}
+        .con-6-1 li{margin-right:4px; margin-bottom: 4px; padding-left: 4px;}
+        .con-6-1 .li-6{width:64px; height: 20px; line-height: 20px; text-align: center; background: #ff6699; border-radius: 5%; margin-top:16px;}
+        .con-6-1 .li-7{margin-top:22px; padding-left: 14px;}
+        .li-6 a{color: #fff;}
+        .con-6-1 a:hover{color:#ff0;}
+
+        .foot{ height:210px; background: #f5f5f5; border-top:1px solid #ccc; border-bottom:1px solid #ccc; margin: 0 auto;}
+        .foot-1{width:252px;}
+        .foot-1 img{padding-top: 34px; padding-left:16px;}
+        .foot-1 p{padding-top:34px; margin-left: 13px;}
+        .foot a:hover{color: #ed3577;}
+        .foot-ul{padding-top:30px; margin-right: 56px;}
+        .foot-ul li{line-height: 26px;}
+        .foot-ul-2{margin-left: 56px; padding-top: 30px;}
+        .foot-ul-2 h5{margin-bottom: 20px;}
+        .foot-ul-3{margin-left: 340px; padding-top: 30px;}
+        .foot-ul-3 h5{margin-bottom: 20px;}
+
+        .bottom-1{height:30px;border-bottom:1px solid #ccc; line-height: 30px; padding-left: 21px;}
+        .bottom-1 li{margin-right: 14px;}
+        .bottom-2{height: 70px;}
+        .bottom-2 li{padding-left: 10px; line-height: 20px;}
+        .bottom-2 a:hover{color: #ff6599;}
+        .bottom-1 a:hover{color: #ff6599;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+        <ul class="top-con clearfix">
+            <li class="li-1 fl"><a href="#"><img src="img/i_wx_single.png" alt=""/>微信登录</a></li>
+            <li class="li-1 fl"><a href="#"><img src="img/qq-1.jpg" alt=""/>QQ登录</a></li>
+            <li class="li-2 fl"><a href="#">登录</a></li>
+            <li class="li-2 fl"><a href="#">注册</a></li>
+            <li class="li-3 fl"><a href="#"><img src="img/gwc-1.jpg" alt=""/>我的购物车</a></li>
+            <li class="li-4 fl"><a href="#"><img src="img/wb-2.jpg" alt=""/>我的订单</a></li>
+            <li class="li-4 fl"><a href="#"><img src="img/xz-2.jpg" alt=""/>下载APP</a></li>
+            <li class="li-5 fl"><a href="#">客服服务</a></li>
+        </ul>
+        </div>
+        <div class="nav-top">
+            <ul class="clearfix">
+                <li class="fl"><a href="#"><img src="img/logo_n4.png" alt=""/></a></li>
+                <li class="li-1 fl clearfix">
+                    <div class="bbi fl">
+                        <div class="bbi-con"><a href="#">宝贝</a>
+                            <ul class="show">
+                                <li><a href="#">商品</a></li>
+                                <li><a href="#">商品</a></li>
+                                <li><a href="#">商品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input class="fl" type="text" value="搜索流行商品"/>
+                    <a href="#" class="a-1 fl">搜索</a>
+                </li>
+            </ul>
+        </div>
+       <ul class="nav-con clearfix">
+            <li class="li-7 fl"><a href="#">首页</a></li>
+            <li class="li-9 fl"><a href="#">今日最热</a></li>
+            <li class="li-8 fl"><a href="#">衣服</a></li>
+            <li class="li-8 fl"><a href="#">鞋子</a></li>
+            <li class="li-8 fl"><a href="#">包包</a></li>
+            <li class="li-8 fl"><a href="#">配饰</a></li>
+            <li class="li-8 fl"><a href="#">美妆</a></li>
+            <li class="li-8 fl"><a href="#">特卖</a></li>
+            <li class="li-8 fl"><a href="#">团购</a></li>
+            <li class="li-8 fl"><a href="#">号店</a></li>
+            <li class="li-8 fl"><a href="#">杂志</a></li>
+            <li class="li-9 fl"><a href="#">爱美丽Club</a></li>
+        </ul>
+        <div class="con-1 clearfix">
+            <div class="banner-1"></div>
+            <div class="con-l fl">
+            <div class="con-l-1">
+                <h1><img src="img/icon-1.jpg" alt=""/>最热</h1>
+                <p>
+                    <a href="#"> 冬季新品&nbsp;</a><i><a href="#">毛衣</a></i>&nbsp;<a href="#">活力运动鞋</a><br>
+                    <a href="#">连衣裙</a>&nbsp;<i><a href="#">新款靴子</a></i>&nbsp;<a href="#">单肩包</a><br>
+                    <a href="#">暖冬美裤</a>&nbsp;<a href="#">外套</a>&nbsp;<i>人的打底裤</i>
+                </p>
+            </div>
+            <div class="con-l-1">
+                <h1><img src="img/icon-1.jpg" alt=""/>最热</h1>
+                <p>
+                    <a href="#"> 冬季新品&nbsp;</a><i><a href="#">毛衣</a></i>&nbsp;<a href="#">活力运动鞋</a><br>
+                    <a href="#">连衣裙</a>&nbsp;<i><a href="#">新款靴子</a></i>&nbsp;<a href="#">单肩包</a><br>
+                    <a href="#">暖冬美裤</a>&nbsp;<a href="#">外套</a>&nbsp;<i>人的打底裤</i>
+                </p>
+            </div>
+            <div class="con-l-1">
+                <h1><img src="img/icon-1.jpg" alt=""/>最热</h1>
+                <p>
+                    <a href="#"> 冬季新品&nbsp;</a><i><a href="#">毛衣</a></i>&nbsp;<a href="#">活力运动鞋</a><br>
+                    <a href="#">连衣裙</a>&nbsp;<i><a href="#">新款靴子</a></i>&nbsp;<a href="#">单肩包</a><br>
+                    <a href="#">暖冬美裤</a>&nbsp;<a href="#">外套</a>&nbsp;<i>人的打底裤</i>
+                </p>
+            </div>
+            <div class="con-l-1">
+                <h1><img src="img/icon-1.jpg" alt=""/>最热</h1>
+                <p>
+                    <a href="#"> 冬季新品&nbsp;</a><i><a href="#">毛衣</a></i>&nbsp;<a href="#">活力运动鞋</a><br>
+                    <a href="#">连衣裙</a>&nbsp;<i><a href="#">新款靴子</a></i>&nbsp;<a href="#">单肩包</a><br>
+                    <a href="#">暖冬美裤</a>&nbsp;<a href="#">外套</a>&nbsp;<i>人的打底裤</i>
+                </p>
+            </div>
+            <div class="con-l-1 con-l-1-d">
+                <h1><img src="img/icon-1.jpg" alt=""/>最热</h1>
+                <p>
+                    <a href="#"> 冬季新品&nbsp;</a><i><a href="#">毛衣</a></i>&nbsp;<a href="#">活力运动鞋</a><br>
+                    <a href="#">连衣裙</a>&nbsp;<i><a href="#">新款靴子</a></i>&nbsp;<a href="#">单肩包</a><br>
+                    <a href="#">暖冬美裤</a>&nbsp;<a href="#">外套</a>&nbsp;<i>人的打底裤</i>
+                </p>
+            </div>
+        </div>
+            <div class="banner fl">
+                <a href="#"><img src="img/logo.jpg" alt=""/></a>
+                <div class="bar-con fl  clearfix">
+                <div class="fl"><a href="#"><img src="img/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" alt=""/></a></div>
+                <div class="fl"><a href="#"><img src="img/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" alt=""/></a></div>
+                <div class="fl"><a href="#"><img src="img/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" alt=""/></a></div>
+                <div class="fl"><a href="#"><img src="img/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" alt=""/></a></div>
+                </div>
+            </div>
+            <div class="con-1-r fl">
+                <div><a href="#"><img src="img/ndi.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="img/ndi.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="img/ndi.jpg" alt=""/></a></div>
+                <div><a href="#"><img src="img/ndi.jpg" alt=""/></a></div>
+            </div>
+        </div>
+        <div class="con-2">
+            <h1><i>☆</i>人气推荐<i>单品</i></h1>
+            <ul class="clearfix">
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+            </ul>
+        </div>
+        <div class="con-3">
+            <ul class="clearfix">
+                <li class="fl">
+                    <a href="#">
+                        <i>1885人已购买</i>
+                        <img src="img/con-2.jpg" alt=""/>
+                    </a><div><a href="#">有效吸附污垢，我的心机黑<br>珍珠黑面膜八块</a><p>￥48元<span>￥148</span></p></div>
+                </li>
+                <li class="fl">
+                    <a href="#">
+                        <i>1885人已购买</i>
+                        <img src="img/con-2.jpg" alt=""/>
+                    </a><div><a href="#">有效吸附污垢，我的心机黑<br>珍珠黑面膜八块</a><p>￥48元<span>￥148</span></p></div>
+                </li>
+                <li class="fl">
+                    <a href="#">
+                        <i>1885人已购买</i>
+                        <img src="img/con-2.jpg" alt=""/>
+                    </a><div><a href="#">有效吸附污垢，我的心机黑<br>珍珠黑面膜八块</a><p>￥48元<span>￥148</span></p></div>
+                </li>
+                <li class="fl">
+                    <a href="#">
+                        <i>1885人已购买</i>
+                        <img src="img/con-2.jpg" alt=""/>
+                    </a><div><a href="#">有效吸附污垢，我的心机黑<br>珍珠黑面膜八块</a><p>￥48元<span>￥148</span></p></div>
+                </li>
+                <li class="fl">
+                    <a href="#">
+                        <i>1885人已购买</i>
+                        <img src="img/con-2.jpg" alt=""/>
+                    </a><div><a href="#">有效吸附污垢，我的心机黑<br>珍珠黑面膜八块</a><p>￥48元<span>￥148</span></p></div>
+                </li>
+                <li class="fl">
+                    <a href="#">
+                        <i>1885人已购买</i>
+                        <img src="img/con-2.jpg" alt=""/>
+                    </a><div><a href="#">有效吸附污垢，我的心机黑<br>珍珠黑面膜八块</a><p>￥48元<span>￥148</span></p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="con-4">
+            <h1 class="clearfix"><i>☆</i>人气推荐<i>单品</i><p class="fr">查看所有团购&gt;</p></h1>
+            <ul class="clearfix">
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+                <li class="fl"><a href="#"><img src="img/con-1.jpg" alt=""/><div>美丽上线不到50元<br><i>￥49.00<span>￥189.00</span></i></div></a></li>
+            </ul>
+        </div>
+        <div class="logo-2"><a href="#"><img src="img/logo-2.jpg" alt=""/></a></div>
+        <div class="con-5 clearfix">
+            <h1><img  src="img/xiezi.jpg" alt=""/>&nbsp;<i>鞋子</i><span><a href="#">今日上新4098件</a></span></h1>
+            <ul class="con-5-l fl clearfix">
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="con-5-r fl clearfix">
+                <li class="hi-1 clearfix"><h1 class="fl">最热衣服店<a   href="#" class="fr">更多好店&gt;</a></h1></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="li-4 clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+            </ul>
+        </div>
+        <div class="con-5 clearfix">
+            <h1><img  src="img/xiezi.jpg" alt=""/>&nbsp;<i>鞋子</i><span><a href="#">今日上新4098件</a></span></h1>
+            <ul class="con-5-l fl clearfix">
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="con-5-r fl clearfix">
+                <li class="hi-1 clearfix"><h1 class="fl">最热衣服店<a   href="#" class="fr">更多好店&gt;</a></h1></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="li-4 clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+            </ul>
+        </div>
+        <div class="con-5 clearfix">
+            <h1><img  src="img/xiezi.jpg" alt=""/>&nbsp;<i>鞋子</i><span><a href="#">今日上新4098件</a></span></h1>
+            <ul class="con-5-l fl clearfix">
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-5-r.jpg" alt=""/></a></li>
+                <li>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                    <ul class="clearfix fl">
+                        <li class="fl"><div class="div-t clearfix"><h2 class="fl">上衣</h2>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                            <p class="fl">
+                                <a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a><a href="#">背心</a>
+                            </p>
+                        </div>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="con-5-r fl clearfix">
+                <li class="hi-1 clearfix"><h1 class="fl">最热衣服店<a   href="#" class="fr">更多好店&gt;</a></h1></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+                <li class="li-4 clearfix"><img class="fl" src="img/xtb.jpg" alt=""/><div class="fl"><a href="#">妖精的衣橱</a><br><i>235件商品总销量84572</i></div></li>
+            </ul>
+        </div>
+        <div class="con-6">
+            <h3 class="clearfix"><img class="fl img-1" src="img/si.jpg" alt=""/><a class="fl a-1" href="#">热门<i>杂志</i></a>
+                <ul class="ul-1 fr clearfix">
+                    <li class="fl"><a href="#">欧美</a></li>
+                    <li class="fl"><a href="#">欧美</a></li>
+                    <li class="fl"><a href="#">欧美</a></li>
+                    <li class="fl"><a href="#">欧美</a></li>
+                    <li class="fl"><a href="#">欧美</a></li>
+                    <li class="fl"><a href="#">欧美</a></li>
+                    <li class="fl"><a href="#">欧美</a></li>
+                </ul>
+            </h3>
+                <ul class="con-6-1 fl">
+                    <li>
+                        <h4>小人物有恋物癖</h4>
+                    </li>
+                    <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                    <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                    <li class="li-7 fl"><a href="#">886分享</a></li>
+                    <li class="fr"><div class="li-6"><a href="#">去看看</a></div></li>
+                </ul>
+            <ul class="con-6-1 fl">
+                <li>
+                    <h4>小人物有恋物癖</h4>
+                </li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="li-7 fl"><a href="#">886分享</a></li>
+                <li class="fr"><div class="li-6"><a href="#">去看看</a></div></li>
+            </ul>
+            <ul class="con-6-1 fl">
+                <li>
+                    <h4>小人物有恋物癖</h4>
+                </li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="li-7 fl"><a href="#">886分享</a></li>
+                <li class="fr"><div class="li-6"><a href="#">去看看</a></div></li>
+            </ul>
+            <ul class="con-6-1 fl">
+                <li>
+                    <h4>小人物有恋物癖</h4>
+                </li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="li-7 fl"><a href="#">886分享</a></li>
+                <li class="fr"><div class="li-6"><a href="#">去看看</a></div></li>
+            </ul>
+            <ul class="con-6-1 fl">
+                <li>
+                    <h4>小人物有恋物癖</h4>
+                </li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6-1.jpg" alt=""/></a></li>
+                <li class="fl"><a href="#"><img src="img/con-6.jpg" alt=""/></a></li>
+                <li class="li-7 fl"><a href="#">886分享</a></li>
+                <li class="fr"><div class="li-6"><a href="#">去看看</a></div></li>
+            </ul>
+        </div>
+        <div class="foot clearfix">
+                <div class="foot-1 fl clearfix">
+                    <img class="fl" src="img/dh.jpg" alt=""/>
+                    <p class="fl"><a href="#">4000-800-577</a><br><br>
+                        <a href="#">美丽说客服热线</a><br><br>
+                            <a href="#">周一至周日：8：00-22:00</a></p>
+                </div>
+                <ul class="foot-ul fl">
+                    <li><h1>用户帮助</h1></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            <ul class="foot-ul fl">
+                <li><h1>用户帮助</h1></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+            <ul class="foot-ul fl">
+                <li><h1>用户帮助</h1></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+            <ul class="foot-ul-2 fl">
+                <li><h5><a href="#">美丽说公共微信号</a></h5></li>
+                <li><a href="#"><img src="img/wx.jpg" alt=""/></a></li>
+            </ul>
+            <ul class="foot-ul-3 fl">
+                <li><h5><a href="#">美丽说公共微信号</a></h5></li>
+                <li><a href="#"><img src="img/db-2.jpg" alt=""/></a></li>
+            </ul>
+        </div>
+        <ul class="bottom-1 clearfix">
+            <li class="fl"><a href="#">友情链接</a></li>
+            <li class="fl"><a href="#">腾讯页面</a></li>
+            <li class="fl"><a href="#">友情链接</a></li>
+            <li class="fl"><a href="#">腾讯页面</a></li>
+            <li class="fl"><a href="#">友情链接</a></li>
+            <li class="fl"><a href="#">腾讯页面</a></li>
+            <li class="fl"><a href="#">友情链接</a></li>
+            <li class="fl"><a href="#">腾讯页面</a></li>
+            <li class="fl"><a href="#">友情链接</a></li>
+            <li class="fl"><a href="#">腾讯页面</a></li>
+            <li class="fl"><a href="#">友情链接</a></li>
+            <li class="fl"><a href="#">腾讯页面</a></li>
+            <li class="fl"><a href="#">腾讯页面</a></li>
+            <li class="fr"><a href="#">更多&gt;</a></li>
+        </ul>
+        <ul class="bottom-2 clearfix">
+            <li class="fl">Copyright ©2014 <a href="#">Meilishuo.com</a><a href="#">电信与信息服务业务经营许可证100798号</a>
+                <a href="#">企业法人营业执照</a>  <a href="#">京ICP备11031139号</a>  <a href="#">京公网安备110108006045</a></li>
+            <li class="fl">Copyright ©2014 <a href="#">Meilishuo.com</a><a href="#">电信与信息服务业务经营许可证100798号</a>
+                <a href="#">企业法人营业执照</a>  <a href="#">京ICP备11031139号</a>  <a href="#">京公网安备110108006045</a></li>
+        </ul>
+    </div>
+</body>
+</html>
