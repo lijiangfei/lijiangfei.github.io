@@ -57,8 +57,8 @@
 .con-4 .p2{width:840px; height:2px; border-bottom:4px solid #22C3AA; margin: 0 auto; margin-top: 2px;}
 .con-4 .title{width:796px;background-color: #AEE2D9;margin: 20px auto;padding: 1em 1.5em;border-style: solid;border-color: #22C3AA;border-width: 0 1px 0 7px;color: #444;font-size: 1rem;}
 .con-4 .title p{height:62px; line-height: 30px; font-size: 20px; font-family:'Microsoft YaHei';}
-#blocking{ width: 700px; height: 400px; background: url(img4/0.jpg); margin: 50px auto; position: relative;  }
-#blocking span{background: url(img4/1.jpg); position: absolute; opacity: 0;  }
+#blocking{ width: 700px; height: 400px; background: url(../img4/0.jpg); margin: 50px auto; position: relative;  }
+#blocking span{background: url(../img4/1.jpg); position: absolute; opacity: 0;  }
 .con-4 #btn3{color:#fff;position: absolute; left:433px;top:235px; width:100px; height:30px; text-align: center; line-height: 30px; background: #09c;}
 .con-5{width:100%; height:818px; border-top:3px dashed #22C3AA; position:relative;}
 .con-5 h3{font-size:48px; padding-left: 88px; font-family: 'Microsoft YaHei'; color:#ccc; margin-top: 30px;}
