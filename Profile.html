@@ -3,105 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        .inner-1{height:1000px;}
-        .top{width:100%; height:515px; background: url("img/hd-bg.jpg")no-repeat; position: relative;}
-        .opa{width:100%; height:515px; opacity: 0.8; background: #000;}
-        .top-con{position: absolute;  right:130px; top:20px;}
-        .top-con li{position: relative; width:98px;}
-        .top-con li a{font-size: 13px;  color:rgba(255, 255, 255, 0.7); font-family: 'Microsoft YaHei'; margin-right: 40px;}
-        .top li span{height:3px; background:#33d685; position: absolute; left: 0; top:20px; }
-        .con{width:940px; height:525px; margin: 0 auto; background: white; position: absolute; left:50%; top:340px; margin-left: -475px;}
-        .left{width:300px; height:350px; margin: 57px 63px 0 50px;}
-        .left img{width:100%; display:block;}
-        .right{width:477px ;height:300px; margin-top: 57px;}
-        .hello{width: 70px; height: 29px; background: #33d685; font-size: 14px; font-weight: 700; font-family: "Open Sans", 'Microsoft Yahei', sans-serif; line-height: 29px; text-align: center; color: #fff; position: relative; left: 0; top: 0; margin-bottom: 28px; }
-        .name{font-size: 36px;margin-bottom: 5px; font-family: "Open Sans", 'Microsoft Yahei', sans-serif; color: #3d4451; font-weight: bold; line-height: 1.1; margin-bottom: 13px;}
-        .name span{ font-weight: 300;color: #3d4451; font-size: 36px;}
-        .job{font-size: 18px;font-weight: 400;line-height: 1.1;color: #3d4451;padding-bottom: 25px;margin-bottom: 25px;border-bottom: 1px solid #dedede; font-family: 'Microsoft YaHei';}
-        .profile dt{width: 120px;float: left;color: #333333;font-size: 15px;font-weight: normal;line-height: 26px;text-transform: uppercase;margin-bottom: 6px;}
-        .profile dd{margin-left: 125px;font-size: 16px;font-weight: 400;line-height: 26px;color: #9da0a7;margin-bottom: 6px;vertical-align: baseline;}
-        .profile dd a{font-size:16px; color:#9da0a7; font-family: 'Microsoft YaHei';}
-        .profile-vacation{width: 120px;float: left;color: #333333;font-size: 15px;font-weight: normal;line-height: 26px;text-transform: uppercase;margin-bottom: 6px;}
-        .profile-vacation span{color: #fff; font-size: 12px; font-weight: 700; line-height: 100%; text-transform: none; padding: 7px 8px; display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background-color: #33d685;}
-        .social-bar{ position: absolute;left: 0; bottom: 0; background: #33d685; width: 100%; height: 85px;}
-        .con-1{width:948px; height:108px; margin: 0 auto;font-size: 24px; color:#9da0a7;opacity: 0; }
-        .dwnload{-webkit-transition:all ease 1s; width:940px; height:135px; margin: 0 auto; text-align: center; line-height: 56px; margin-top: 50px; opacity: 0;}
-        .dwnload a{display:block; font-size: 18px; color:#3d4451;width:237px; height:58px; border:1px solid #9da0a7; margin: 0 auto; }
-        .dwnload a:hover{-webkit-transition:all ease 1s; box-shadow: 0 10px 10px #ccc; transform:translateZ(-4px);}
-        .pay{width:940px; height:340px; margin: 0 auto; text-align: center; }
-        .pay h2{font-size: 36px; color:#3d4451; font-family:'Microsoft YaHei';}
-        .pay-box{width:940px; height:245px; background: #fff; margin-top: 20px; }
-        .pay-box ul li{width:405px; height: 65px; line-height: 65px; color:#3d4451; float: left; position: relative; margin-right: 64px;}
-        .pay-box ul li em,span{font-size:16px; font-family: 'Microsoft YaHei';}
-        .pay-box ul li span.bar-wrap{width:405px; height:5px; background: #d6f7e7;}
-        .pay-box ul li i{height:5px; background: #33d685; display:block; width:0}
-        .bar-wrap{position: absolute; left:20px;bottom:0;}
-        .foot{width:940px; height:562px; margin: 0 auto;}
-        .my-info{float: left;width: 455px;height: 488px;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);background: #fff;box-sizing: border-box;padding: 40px 50px;}
-        .foot h2{text-align:center;color: #3d4451;margin-bottom: 25px;font-weight: normal;font-size: 36px;}
-        .my-info h3{font-size: 24px;font-weight: 400;margin: 0 0 25px 0;line-height: 1.1;color: #3d4451;}
-        .my-info dt{font-size:16px;margin-bottom:10px;font-family: 'Microsoft YaHei'; width: 100px; float: left; margin-bottom: 31px; text-align: left; color: #414141; font-weight: 400; box-sizing: border-box; border-left: 2px solid #33d685; line-height: 100%; padding-left: 10px; position: relative; left: 0; top: 0;}
-        .my-info dl dd{font-size:16px;font-family: 'Microsoft YaHei'; width: 255px;float: left; margin-bottom: 32px; position: relative; left: 0; top: 0; font-weight: 300; text-align: left; text-indent: 20px; line-height: 100%; cursor: pointer;}
-        .loca{float: right;width: 455px; height: 488px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); background: #fff;}
-    </style>
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/Profile.css">
     <script src="js/move.js"></script>
-    <script>
-        function getPos(obj){
-            var l=0;
-            var t=0;
-            while (obj){
-                l+=obj.offsetLeft;
-                t+=obj.offsetTop;
-                obj=obj.offsetParent;
-            }
-            return{
-                left:l,
-                top:t
-            }
-        }
-        window.onload = function () {
-            'use strict';
-            var oTop=document.getElementById('top');
-            var aLi=oTop.getElementsByTagName('li');
-            var aSpan=oTop.getElementsByTagName('span');
-            for(var i=0; i<aLi.length; i++){
-                aLi[i].index=i;
-                aLi[i].onmouseenter=function(){
-                    move(aSpan[this.index],{width:60})
-                };
-                aLi[i].onmouseleave=function(){
-                    move(aSpan[this.index],{width:0})
-                }
-            }
-            var oCon1=document.getElementById('con1');
-            var oDown=document.getElementById('down');
-            var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
-            window.onscroll=function(){
-                var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
-                if(scrollTop>600){
-                    move(oCon1,{opacity:1},{duration:100})
-                }
-                if(scrollTop>700){
-                    move(oDown,{opacity:1},{duration:100})
-                }
-                var oUl=document.getElementById('ul1');
-                var aI=oUl.getElementsByTagName('i');
-                console.log(scrollTop);
-                if(scrollTop>800){
-                    for(var i=0; i<aI.length; i++){
-                        move(aI[i],{width:380},{duration:2000})
-                    }
-                }
-            };
-        };
-    </script>
+    <script src="js/profile.js"></script>
 </head>
 <body style=" background: #efefef;">
     <div class="inner-1">
