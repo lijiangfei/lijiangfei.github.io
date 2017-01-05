@@ -1,6 +1,4 @@
-/**
- * Created by ijiajia on 2016/6/30.
- */
+﻿
 ;(function(window){
     var left=0;
     var iSpeed=0;   // 速度
