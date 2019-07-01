@@ -8,6 +8,10 @@ function getPos(obj){
         obj=obj.offsetParent;
     }
     return {left: l, top: t};
+
+
+
+
 }
 function toDou(n){
     return n<10?'0'+n:''+n;
